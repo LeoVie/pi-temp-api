@@ -1,0 +1,34 @@
+examples_integer:
+    path:       /examples/integer
+    defaults:   { _controller: app.examples_controller:integerAction }
+    methods:    [GET]
+
+examples_string:
+    path:       /examples/string
+    defaults:   { _controller: app.examples_controller:stringAction }
+    methods:    [GET]
+
+examples_array:
+    path:       /examples/array
+    defaults:   { _controller: app.examples_controller:arrayAction }
+    methods:    [GET]
+
+examples_exception:
+    path:       /examples/exception
+    defaults:   { _controller: app.examples_controller:exceptionAction }
+    methods:    [GET]
+
+examples_entity:
+    path:       /examples/entity
+    defaults:   { _controller: app.examples_controller:entityAction }
+    methods:    [GET]
+
+examples_validation:
+    path:       /examples/validation
+    defaults:   { _controller: app.examples_controller:validationAction }
+    methods:    [GET]
+
+examples_oauth_protected:
+    path:       /examples/oauth-protected
+    defaults:   { _controller: app.examples_controller:oauthProtectedAction }
+    methods:    [GET]

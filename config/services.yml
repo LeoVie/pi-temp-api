@@ -1,0 +1,6 @@
+services:
+    # Controller is registered as service.
+    # By this way you can provide only the dependencies really needed for this controller using arguments option.
+    app.index_controller:
+        class: ApiBundle\Controller\IndexController
+        arguments: ['@logger']

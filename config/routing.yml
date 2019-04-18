@@ -1,0 +1,7 @@
+index:
+    path:       /
+    defaults:   { _controller: app.index_controller:indexAction }
+    methods:    [GET]
+
+examples:
+    resource: '@ExampleBundle/Resources/config/routing.yml'
