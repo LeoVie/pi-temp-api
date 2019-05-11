@@ -1,10 +1,29 @@
 {
-    "name": "kununu/symfony-api-skeleton",
-    "license": "proprietary",
-    "type": "project",
+    "name": "slim/slim-skeleton",
+    "description": "A Slim Framework skeleton application for rapid development",
+    "keywords": ["microframework", "rest", "router", "psr7"],
+    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josh Lockhart",
+            "email": "info@joshlockhart.com",
+            "homepage": "http://www.joshlockhart.com/"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "illuminate/database": "~5.1",
+        "monolog/monolog": "^1.17",
+        "slim/php-view": "^2.0",
+        "slim/slim": "^3.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.1"
+    },
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "Models\\": "models/"
         }
     },
     "autoload-dev": {
@@ -12,50 +31,12 @@
             "Tests\\": "tests/"
         }
     },
-    "require": {
-        "php": ">=7.0",
-        "doctrine/doctrine-bundle": "^1.6",
-        "doctrine/doctrine-cache-bundle": "^1.2",
-        "doctrine/orm": "^2.5",
-        "incenteev/composer-parameter-handler": "^2.0",
-        "jms/serializer-bundle": "^1.0",
-        "kununu/controller-validation-bundle": "dev-master",
-        "sensio/distribution-bundle": "^5.0",
-        "sensio/framework-extra-bundle": "^3.0.2",
-        "symfony/monolog-bundle": "^3.0",
-        "symfony/polyfill-apcu": "^1.0",
-        "symfony/symfony": "^3.2",
-        "kununu/rest-api-bundle": "^1.0"
-    },
-    "require-dev": {
-        "sensio/generator-bundle": "^3.0",
-        "vlucas/phpdotenv": "^2.4",
-        "phpunit/phpunit": "^5.7"
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
     },
     "scripts": {
-        "post-install-cmd": [
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
-        ],
-        "post-update-cmd": [
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache"
-        ]
-    },
-    "extra": {
-        "symfony-app-dir": "src",
-        "symfony-bin-dir": "bin",
-        "symfony-var-dir": "var",
-        "symfony-web-dir": "web",
-        "symfony-tests-dir": "tests",
-        "symfony-assets-install": "relative",
-        "incenteev-parameters": {
-            "file": "config/parameters.yml",
-            "env-map": {
-                "secret": "SECRET"
-            }
-        },
-        "branch-alias": null
+        "start": "php -S localhost:8080 -t public",
+        "test": "phpunit"
     }
 }

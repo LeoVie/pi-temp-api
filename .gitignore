@@ -1,7 +1,4 @@
-vendor/
-.idea/
-.DS_Store
-.terraform/
-.terraform.tfstate*
-deploy.prop
-config/parameters.yml
+vendor
+.idea
+logs
+.phpunit.result.cache

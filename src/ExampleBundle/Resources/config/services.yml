@@ -1,4 +1,0 @@
-services:
-    app.examples_controller:
-        class: ExampleBundle\Controller\ExamplesController
-        arguments: ['@logger']
